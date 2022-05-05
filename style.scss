@@ -1,0 +1,40 @@
+@import 'scss/color-variables';
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+body {
+    margin: 10px;
+}
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: solid 1px $color-primary;
+    h1 {
+        color: $color-tertiary;
+        border-bottom: solid 1px $color-secondary;
+        width: max-content;
+        padding-top: 20px;
+    }
+    section {
+        display: flex;
+        padding: 10px;
+        article {
+            padding: 20px 10px;
+            border: solid 1px $color-tertiary;
+            text-align: center;
+            &:nth-child(even) {
+                p {
+                color: $color-primary;
+                }
+            }
+            &:nth-child(odd) {
+                p {
+                color: $color-secondary;
+                }
+            }
+        }
+    }
+}
